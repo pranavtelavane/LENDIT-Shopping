@@ -1,0 +1,56 @@
+.header-image {
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 80%;
+    height: 30px;
+    margin-top: 2%;
+  }
+  
+  .main-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .bottom-three {
+      margin-bottom: 2cm;
+   }
+  
+    .example-card{
+      display:inline-block;
+  }
+  
+  .dis{
+    display: flex;
+  }
+  
+  .match{
+    text-align: left;
+    width: 100%;
+  }
+  .card-container {
+    /*  not needed styles to reflect it */ 
+    /* background: blue; */
+    padding: 18px;
+    /* color: white; */
+    /* needed styles below */
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 68px;
+  }
+  .content {
+    padding: 30px;
+  }
+  
+  .content > mat-card {
+    width: 1300px;
+    border: 1px solid #000;
+    margin-bottom: -62px;
+  }
