@@ -1,7 +1,7 @@
 .header-image {
     background-size: cover;
-    height: 400px;
-    width: 300px;
+    height: 200px;
+    width: 150px;
     flex-shrink: 0;
     object-fit: cover;
   }
@@ -53,4 +53,42 @@
     width: 1300px;
     border: 1px solid #000;
     margin-bottom: -62px;
+    top: 130px;
+    z-index: 1;
+  }
+  .search{
+    display: flex;
+    width: 100%;
+    /* margin-left: 300px; */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 64px;
+    z-index: 10;
+    background-color: white;
+  }
+  .se{
+    margin-right: 50px;
+    width: 300px;
+  }
+
+  .coon{
+    display: flex;
+  }
+  .titl{
+    display: block;
+    width: 500px;
+    margin-left: 20px;
+  }
+
+  .rupo{
+    margin-left: 400px;
+  }
+
+  .bpos{
+    margin-left: 284px;
+    font-size: 9px;
+    line-height: 63px;
+    height: auto;
+    width: auto;
   }

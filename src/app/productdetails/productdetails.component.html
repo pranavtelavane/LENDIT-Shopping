@@ -1,1 +1,50 @@
-<p>productdetails works!</p>
+<!-- <mat-card class="content">
+  <img class="imgsize" src="{{ productdata?.images[0] }}" />
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ productdata?.title }}</mat-card-title>
+    <mat-card-subtitle
+      >{{ productdata?.rating }} left<b>{{ productdata?.stock }}</b>
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      {{ productdata?.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<div class="content">
+  <mat-card class="card-container">
+    <div class="coon">
+      <img src="{{ productdata?.images[0] }}" class="header-image" />
+      <div class="titl">
+      <mat-card-header>
+        <mat-card-title
+          ><h1>
+            <strong>{{ productdata?.title | uppercase }}</strong>
+          </h1>
+          <mat-card-subtitle
+            >{{ productdata?.rating }} left<b>{{ productdata?.stock }}</b>
+          </mat-card-subtitle></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <p class="card-container-left">{{ productdata?.description }}</p>
+      </mat-card-content>
+      
+      <!-- <div class="rupo"> -->
+        <mat-card-content>
+            {{productdata?.discountPercentage}} % off
+          <h1>{{ productdata?.price | currency : "INR" : "symbol" }}</h1>
+        </mat-card-content>
+      <!-- </div> -->
+    </div>
+    </div>
+  </mat-card>
+</div>

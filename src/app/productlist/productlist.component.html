@@ -1,30 +1,49 @@
 <mat-card>
-    <mat-form-field class="example-full-width">
-        <span matPrefix> </span>
-        <input type="tel" matInput placeholder="Search" name= "search">
-        <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Category</mat-label>
-            <mat-select>
-              <option value="BANANA">
-                BANANA
-              </option>
-            </mat-select>
-          </mat-form-field>
+  <div class="search">
+    <mat-form-field class="se">
+      <span matPrefix> </span>
+      <input type="tel" (keyup)="searchv($event)" matInput id="searchval" placeholder="Search" name="search" />
+      <button (click)="searchproduct()" matSuffix mat-button><mat-icon>search</mat-icon></button>
+    </mat-form-field>
+    <mat-form-field class="se">
+      <mat-label>Category</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let cat of category" (click)="categoryval(cat)" [value]="cat">
+          {{cat}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+<diV class="bpos">
+    <button  mat-raised-button color="primary">Add</button>
+</diV>
+  </div>
 </mat-card>
 
 <div class="content">
-   
-    <mat-card class="card-container" *ngFor="let data of list let i=index">
-      <div>
-        <img src={{data.images[0]}} class="header-image"/>
+  <mat-card class="card-container" *ngFor="let data of templist; let i = index">
+    <div class="coon" (click)="details(data)">
+      <img src="{{data.images[0]}}" class="header-image" />
+      <div class="titl">
+        <mat-card-header>
+          <mat-card-title
+            ><h2>
+              <b>{{ data.title | uppercase }}</b>
+            </h2></mat-card-title
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <p class="card-container-left">{{ data.description }}</p>
+        </mat-card-content>
       </div>
-      <mat-card-header>
-        <mat-card-title>{{data.title | uppercase}}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="card-container-left">{{data.description}} </p>
-      </mat-card-content> 
-    </mat-card> 
-  </div>
+      <div class="rupo">
+        <mat-card-content>
+          <h1>{{ data.price | currency : "INR" : "symbol" }}</h1>
+        </mat-card-content>
+          <div class="example-button-row">
+            <button mat-button color="primary">Update</button>
+            <button mat-button color="warn">Delete</button>
+          </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

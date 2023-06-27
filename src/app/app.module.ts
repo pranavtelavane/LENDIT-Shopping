@@ -9,12 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from 'src/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
+
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductlistComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MaterialModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

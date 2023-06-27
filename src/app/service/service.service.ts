@@ -16,4 +16,7 @@ export class ServiceService {
   productcategories(){
     return this.http.get(this.apiurl+'/categories')
   }
+  productdetails(i:any){
+    return this.http.get(this.apiurl+'/'+i)
+  }
 }
